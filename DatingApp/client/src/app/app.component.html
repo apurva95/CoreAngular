@@ -1,1 +1,35 @@
-<h1>{{title}}</h1>
+<div style="text-align: center;">
+    <h1 class="btn-dark">{{title}}</h1>
+</div>
+
+<form class="form-group" *ngIf="!verified" style="width: 50%;">
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">UserName</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="user">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+           <button type="submit" class="btn-dark" (click)="Submit()">Login</button>
+        </div>
+      </div>
+</form>
+
+
+<div *ngIf="verified">
+    <h6>USERS</h6>
+    <ul style="text-align: left;">
+        <li *ngFor="let user of Users" class="list-group">
+        {{user.userName}}
+        </li>
+    </ul>
+</div>
+
