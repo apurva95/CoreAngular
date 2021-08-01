@@ -21,16 +21,17 @@ export class AppComponent implements OnInit{
     this.http.get("https://localhost:44396/api/Users").subscribe(next=> this.Users = next);
   }
 
-  Submit()
-  {
-    var userName = document.getElementById("user");
-    var password = document.getElementById("user");
-    debugger
-    this.http.post("https://localhost:44396/api/Account",
-    {
-      "username": userName?.nodeValue,
-      "password": password?.nodeValue
-    });
-  }
+  
+  // Submit()
+  // {
+  //   var userName = document.getElementById("user");
+  //   var password = document.getElementById("user");
+  //   debugger
+  //   this.http.post("https://localhost:44396/api/Account",
+  //   {
+  //     "username": userName?.nodeValue,
+  //     "password": password?.nodeValue
+  //   });
+  // }
   
 }

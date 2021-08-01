@@ -27,7 +27,7 @@ namespace API.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
-            if (await UserExists(registerDto.Username)) return BadRequest("User Exists");
+            if (await UserExists(registerDto.Username)) return BadRequest("User already Exists");
 
             using HMACSHA512 hash = new();
 
