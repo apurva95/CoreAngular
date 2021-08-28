@@ -1,2 +1,2 @@
-dotnet run -p .\API
-npm start
+start dotnet run -p .\API
+start npm start
